@@ -1,0 +1,46 @@
+//*firebase deploy comments:
+
+ng build --configuration production
+
+rm -rf dist
+
+firebase deploy
+
+
+//* NgRx (state management):
+ 
+ install comment: ng add @ngrx/schematics@latest
+ 
+ configuration: ng config cli.drfaultCollection @ngrx/schematics
+ 
+ pakage install: npm install @ngrx/store --save
+                 npm install @ngrx/effects --save
+                 npm install @ngrx/entity --save
+                 npm install @ngrx/store-devtools --save
+                 
+ 
+ ng generate store state --root --module app.module.ts
+ 
+ ng generate action
+ 
+ ng generate reducer
+ 
+ ng generate selector
+ 
+ 
+ //* create environment folder
+ 
+ mkdir -p src/environments
+touch src/environments/environment.ts
+touch src/environments/environment.prod.ts
+
+//* X OAuth clint id, secret
+
+Client ID: WmNpbUIyNjQ0Q0hyTTlpTkxyRU86MTpjaQ
+
+Client Secret: p_28WQ8Nu9f6GvsSvJHBIGlyIgGif9V4f4msnb6QxefQbTPRJJ
+
+
+//* Chrome bug fix 
+
+rm -rf ~/.config/google-chrome/Singleton*
